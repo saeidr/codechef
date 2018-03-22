@@ -1,0 +1,76 @@
+<style>
+	.input-recaptcha{
+		width:172px;
+	}
+	.text-center {
+		text-align: center;
+	}
+	h1, .h1 {
+		font-size: 36px;
+	}
+	h1, .h1, h2, .h2, h3, .h3 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		font-family: inherit;
+		font-weight: 500;
+		line-height: 1.1;
+		color: inherit;
+	}
+	h1 {
+		margin: .67em 0;
+		margin-top: 0.67em;
+		margin-bottom: 0.67em;
+		font-size: 2em;
+	}
+	* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	body {
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: 14px;
+		line-height: 1.42857143;
+		color: #333;
+	}
+	html {
+		font-size: 10px;
+	}
+</style>
+<!--modal-->
+<div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" ng-app="myApp">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h1 class="text-center">يادآوری کلمه عبور</h1>
+			</div>
+			<div class="modal-body">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="text-center">
+								<p><h3>شماره همراه خود را وارد کنید</h3></p>
+								<div class="panel-body">
+									<fieldset>
+										<div class="form-group">
+											<input class="form-control input-lg" placeholder="شماره همراه" name="numbermobil" type="text" >
+										</div>
+										<input class="btn btn-lg btn-primary btn-block" value="یادآوری کلمه عبور" type="submit">
+									</fieldset>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="col-md-12">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">خروج</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

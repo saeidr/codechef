@@ -1,0 +1,44 @@
+<!--signin section-->
+<div id="signin_frm" class="modal fade" role="dialog" ng-app="myApp" ng-controller="UserController as ctrl">
+	<div class="modal-dialog modal-md" style="color: black;">
+		<div class="modal-content">
+<<<<<<< .mine
+		<a ng-click="closeWin()" style="border: 0px solid #d6d9df; height: 28px; width: 28px; display: block; position: absolute; top: 7px; left: 12px; z-index: 1; cursor: pointer;">
+                <img src="static/images/exit.png" alt="" width="35" height="25"></a>
+=======
+            <a ng-click="closeWin()" style="border: 0px solid #d6d9df; height: 28px; width: 28px; display: block; position: absolute; top: 7px; left: 12px; z-index: 1; cursor: pointer;">
+                <img src="static/images/exit.png" alt="" width="35" height="25"></a>
+>>>>>>> .r22
+			<div class="panel-heading btn-info">
+				<h3 class="panel-title" style="text-align: center;">
+					<strong>ورود به سامانه</strong>
+				</h3>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="form-group">
+						<span class="fa fa-user"></span> <label for="exampleInputEmail1">نام کاربری(تلفن همراه)</label> <input type="text"
+							class="form-control" id="exampleInputEmail1"
+							placeholder="Enter phone"
+							ng-model="ctrl.login.userName"
+							>
+					</div>
+					<div class="form-group">
+						<i class="fa fa-lock" aria-hidden="true"></i> <label
+							for="exampleInputPassword1">کلمه عبور </label>
+						<a href="/sessions/forgot_password" style="color:red;padding-right:300px">کلمه
+							عبور را فراموش کرده ام</a><br>
+							<input
+							type="password" class="form-control" id="exampleInputPassword1" ng-model="ctrl.login.password"
+							placeholder="password">
+					</div>
+					<button type="button" class="btn btn-sm btn-primary" ng-click="loginUser()">ورود</button>
+					<div id="ctl03_login_footerbox" class="auth__footer_login">قبلاً در فن آوايار ثبت نام نکرده اید؟
+						<a id="ctlRegister" ng-click="register()" href="" class="green"  >ثبت نام در فن آوا یار</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--end of signin section-->

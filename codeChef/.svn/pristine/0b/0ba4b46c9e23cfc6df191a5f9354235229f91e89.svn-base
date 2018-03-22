@@ -1,0 +1,108 @@
+package com.homeservice.core.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.homeservice.core.dao.UserDao;
+import com.homeservice.core.model.User;
+
+
+@Service("userService")
+@Transactional
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserDao dao;
+	
+	private static final AtomicLong counter = new AtomicLong();
+	
+	private static List<User> users;
+	
+	static{
+		users= populateDummyUsers();
+	}
+
+
+
+	public User findById(int id) {
+		return dao.findById(id);
+	}
+
+	public User findBySSO(String sso) {
+		User user = dao.findBySSO(sso);
+		return user;
+	}
+
+	public void saveUser(User user) {
+		dao.save(user);
+	}
+
+	/*
+	 * Since the method is running with Transaction, No need to call hibernate update explicitly.
+	 * Just fetch the entity from db and update it with proper values within transaction.
+	 * It will be updated in db once transaction ends. 
+	 */
+	public void updateUser(User user) {
+		User entity = dao.findById(user.getId());
+		if(entity!=null){
+			entity.setSsoId(user.getSsoId());
+			entity.setPassword(user.getPassword());
+			entity.setFirstName(user.getFirstName());
+			entity.setLastName(user.getLastName());
+			entity.setEmail(user.getEmail());
+			entity.setUserProfiles(user.getUserProfiles());
+		}
+	}
+
+	
+	public void deleteUserBySSO(String sso) {
+		dao.deleteBySSO(sso);
+	}
+
+	public List<User> findAllUsers() {
+		return dao.findAllUsers();
+	}
+
+	public boolean isUserSSOUnique(Integer id, String sso) {
+		User user = findBySSO(sso);
+		return ( user == null || ((id != null) && (user.getId() == id)));
+	}
+	
+	
+	public boolean isUserExist(User user) {
+		return findBySSO(user.getSsoId())!=null;
+	}
+	
+	public void deleteAllUsers(){
+		users.clear();
+	}
+	public void deleteUserById(int id)
+	{
+		
+	}
+
+	private static List<User> populateDummyUsers(){
+		List<User> users = new ArrayList<User>();
+		User u1 = new User();
+		u1.setId(1);
+		u1.setFirstName("tom");
+		u1.setSsoId("09126716594");
+		
+		User u2 = new User();
+		u1.setId(2);
+		u2.setFirstName("jim");
+		u2.setSsoId("09389006594");
+		users.add(u1);
+		users.add(u2);
+		
+		return users;
+	}
+
+
+	
+}

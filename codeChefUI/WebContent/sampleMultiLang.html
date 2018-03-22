@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<label id="saeid"></label>
+
+<script type="text/javascript" src="./static/js_lib/jquery-1.11.3.min.js"></script> 
+<script type="text/javascript" src="./static/js_lib/jquery.i18n.properties.min.js"></script> 
+<script>
+$.i18n.properties({ 
+		name: 'pageProperties', 
+		path: './resources', 
+		mode: 'both', 
+		language: "fa", 
+		callback: function() { 
+		$("#saeid").text($.i18n.prop('msg_welcome'));
+		}
+});
+</script>
+</body>
+</html>

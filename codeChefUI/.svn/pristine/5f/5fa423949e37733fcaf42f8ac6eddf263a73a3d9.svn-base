@@ -1,0 +1,173 @@
+'use strict';
+
+angular.module('myApp').controller('UserController', ['$scope', 'UserService', function($scope, UserService) {
+    var self = this;
+
+    self.user={};
+    self.users=[];
+
+    self.submit = submit;
+    self.edit = edit;
+    self.remove = remove;
+    self.reset = reset;
+    $scope.emailFormat = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
+    
+    $scope.justPersian=function(event){
+    	var ew = event.which;
+   		//alert(ew);
+   		/*if(ew == 32 || ew == 0 || ew == 8 || ew==13 || ew==64 ||ew==46)
+    		return true;
+    	if(48 <= ew && ew <= 57)
+        	return true;
+    	alert(String.fromCharCode(ew));
+    	if((65 <= ew && ew <= 90)){
+    		console.log("Prevent!");
+    		event.preventDefault();
+    	}
+    	if((97 <= ew && ew <= 122)){
+    		console.log("Prevent!");
+    		event.preventDefault();
+    	}
+        alert("please enter your information in english language");
+        event.preventDefault();*/
+    	return true;
+    }
+
+   
+    
+    fetchAllUsers();
+
+    function fetchAllUsers(){
+        UserService.fetchAllUsers()
+            .then(
+            function(d) {
+                self.users = d;
+            },
+            function(errResponse){
+                console.error('Error while fetching Users');
+            }
+        );
+    }
+
+    function createUser(user){
+        UserService.createUser(user)
+            .then(
+            fetchAllUsers,
+            function(errResponse){
+                console.error('Error while creating User');
+            }
+        );
+    }
+
+    function updateUser(user, id){
+        UserService.updateUser(user, id)
+            .then(
+            fetchAllUsers,
+            function(errResponse){
+                console.error('Error while updating User');
+            }
+        );
+    }
+
+    function deleteUser(id){
+        UserService.deleteUser(id)
+            .then(
+            fetchAllUsers,
+            function(errResponse){
+                console.error('Error while deleting User');
+            }
+        );
+    }
+
+    function submit() {
+    	self.user = {id:null,ssoId:$scope.ctrl.user.age,firstName:$scope.ctrl.user.name,lastName:$scope.ctrl.user.age,email:'dggfg'};
+        if(self.user.id===null){
+            console.log('Saving New User', self.user);
+            createUser(self.user);
+        }else{
+            updateUser(self.user, self.user.id);
+            console.log('User updated with id ', self.user.id);
+        }
+        reset();
+    }
+    
+    $scope.closeWin=function(){
+        $('#signin_frm').modal('hide');
+    }
+    
+    $scope.closeRegistrationWin=function(){
+        $('#registration_frm').modal('hide');
+    }
+    
+    function edit(id){
+        console.log('id to be edited', id);
+        for(var i = 0; i < self.users.length; i++){
+            if(self.users[i].id === id) {
+                self.user = angular.copy(self.users[i]);
+                break;
+            }
+        }
+    }
+
+    function remove(id){
+        console.log('id to be deleted', id);
+        if(self.user.id === id) {//clean form if the user to be deleted is shown there.
+            reset();
+        }
+        deleteUser(id);
+    }
+
+
+    function reset(){
+        self.user={id:null,username:'',address:'',email:''};
+        $scope.myForm.$setPristine(); //reset Form
+    }
+    
+    
+    self.login={};
+    $scope.loginUser=function(){
+		    	self.login = {id:null,username:$scope.ctrl.login.userName,Password:$scope.ctrl.login.password};
+		        if(self.login.id===null){
+		            console.log('Saving New User',self.login);
+		            loginUser(self.login);
+		        }else{
+		            console.log('User updated with id ', self.login.id);
+		        	}
+		    	}
+    
+    function loginUser(login){
+        //	alert(JSON.stringify(self.login))
+        	alert(JSON.stringify(login))
+            UserService.loginUser(login)
+                .then(
+                function(errResponse){
+                    console.error('Error while login User');
+                }
+            );
+    }
+
+
+    self.register={};
+    $scope.regsiterUser=function(){
+    		   	self.register = {id:null,firstname:$scope.ctl.registration_frm.fname,lastname:$scope.ctl.registration_frm.lname,
+		    			username:$scope.ctl.registration_frm.username,password:$scope.ctl.registration_frm.password,
+		    			email:$scope.ctl.registration_frm.email};
+		    	//alert(JSON.stringify(self.register));
+		        if(self.register.id==null){
+		            console.log('Saving New User',self.register);
+		            registerUser(self.register);
+		        }else{
+		            console.log('User updated with id ', self.login.id);
+		        }
+	}
+    
+    function registerUser(userInformation){
+               UserService.registerUser(userInformation)
+                .then(
+                function(errResponse){
+                    console.error('Error while login User');
+                }
+            );
+    }
+
+}]);

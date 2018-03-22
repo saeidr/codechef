@@ -1,0 +1,126 @@
+<!--registration section-->
+<div id="registration_frm" ng-controller="UserController as ctl" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md" style="color:black;">
+    <!-- Modal content-->
+    <div class="modal-content">
+    <a ng-click="closeRegistrationWin()" style="border: 0px solid #d6d9df; height: 28px; width: 28px; display: block; position: absolute; top: 7px; left: 12px; z-index: 1; cursor: pointer;">
+                <img src="static/images/exit.png" alt="" width="35" height="25"></a>
+	 <div class="panel-heading btn-info"><h3 class="panel-title" style="text-align:center;"><strong>عضویت در سامانه</strong></h3></div>
+      <div class="modal-body">
+		<div class="stepwizard">
+    <div class="stepwizard-row setup-panel">
+        <div class="stepwizard-step">
+            <a href="#step-1" id="step_1_btn_selector" type="button" class="btn btn-primary btn-circle">1</a>
+            <p>ورود اطلاعات</p>
+        </div>
+        <div class="stepwizard-step">
+            <a href="#step-2" id="step_2_btn_selector" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+            <p>اعتبارسنجی</p>
+        </div>
+        <div class="stepwizard-step">
+            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+            <p>ورود به پنل</p>
+        </div>
+    </div>
+</div>
+<form name="registration_frm" role="form">
+    <div class="row setup-content" id="step-1">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <div class="form-group">
+                	<span>
+                    	<label class="control-label">نام</label>
+                    	<span style="color:darkred;font-size:12px;float:left;" class="err_registration" id="msgFnameNotPersian">لطفا نام خود را به زبان فارسی وارد کنید</span>
+                    </span>
+                    <span>
+                    	<input  id="txtName"  name="fname" ng-model="ctl.registration_frm.fname"  type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+                    </span>
+                    
+                </div> 
+                <div class="form-group">
+                	<span>
+                    	<label class="control-label">نام خانوادگی</label>
+                    	<span style="color:darkred;font-size:12px;float:left;" class="err_registration" id="msgLnameNotPersian">لطفا نام خانوادگی خود را به زبان فارسی وارد کنید</span>
+                    </span>
+                    <span>
+                    	<input id="txtFamily" type="text" name="lname" ng-model="ctl.registration_frm.lname" required="required" class="form-control" placeholder="Enter Last Name" />
+                    </span>
+                </div>
+				<div class="form-group">
+                    <span>
+                    	<label class="control-label">تلفن همراه (نام کاربری)</label>
+                    	<span id="msgPhone" style="float:left; color:darkred;font-size:12px;" class="err_registration">تلفن همراه در فرمت صحیح وارد کنید</span>
+                    </span>
+                    <span>
+                    	<span style="color:darkred;font-size:12px;" class="err_registration" id="msgUserNameExist">{{ctl.isUserNameRegistered}}</span>
+                    	 <input  ng-minlength="11" type="text" required="required" id="txtUsername" name="username" ng-model="ctl.registration_frm.username" class="form-control" placeholder="Enter Phone Number" />
+                    </span>
+                    
+                   
+                </div>
+				<div class="form-group">
+					<span>
+                    	<label class="control-label">ایمیل</label>
+                    	<span id="msgEmailNotValid" class="err_registration" style="float:left; color:darkred;font-size:12px;">ایمیل را در فرمت صحیح وارد کنید</span>
+                    </span>
+                    <input maxlength="100" id="txtEmail" name="email" ng-model="ctl.registration_frm.email" required="required" class="form-control" type="email" placeholder="Enter Email" />
+                </div>
+				<div class="form-group">
+					<span>
+                    	<label class="control-label">رمزعبور</label>
+                    	<span id="msgPassLength" class="err_registration" style="float:left; color:darkred;font-size:12px;">حداقل طول رمز عبور شش کارکتر می باشد</span>
+                    </span>
+                    <input maxlength="100" type="password" type="password" id="txtPassword" name="password" ng-model="ctl.registration_frm.password" required="required" class="form-control" placeholder="Enter Pass" />
+                </div>
+				<div class="form-group">
+				<span>
+					 <label class="control-label" >تکرار رمزعبور</label>
+					 <span style="float:left; color:darkred;font-size:12px;display:none;" class="err_registration" id="passReType">پسورد و تکرار آن همخوانی ندارند</span>
+				</span>
+                      <input maxlength="100" type="password" id="txtConfirmPassword"  name="confirmPassword" ng-model="confirmPassword"  required="required" class="form-control" placeholder="Enter Pass Again" />
+                </div>
+                <button id="btnRegistrationWizardStepOne" class="btn btn-primary nextBtn btn-lg pull-right" type="button" >مرحله ی بعد</button>
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-2">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3>اعتبارسنجی</h3>
+                <div class="form-group">
+                	<span>
+                    	<label class="control-label">تلفن همراه (نام کاربری)</label>
+                    	<span id="msgVerificationFalse" class="err_registration" style="float:left; color:darkred;font-size:12px;display:none;">کد وارد شده معتبر نمی باشد</span>
+                    </span>
+                    <label class="control-label">کد ارسالی به تلفن خود را وارد کنید</label>
+                    <input id="txtValidationCode" maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Validation Code" />
+                </div>
+				<a href="#" id="reGetSMS" class="btn btn-danger btn-lg"><i>ارسال مجدد</i><i class="fa fa-repeat" aria-hidden="true"></i></a>
+				<div class="setup-panel stepwizard-step" style="display:inline">
+					<div style="display:inline;">
+						<a href="#step-1" type="button" class="btn btn-primary btn-lg" style="float:left;">مرحله قبل</a>
+					</div>
+				</div>
+               <button id="btnRegistrationWizardStepTwo" class="btn btn-primary nextBtn btn-lg pull-right" style="margin-left:5px;" type="button" >مرحله ی بعد</button>
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-3">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3 style="margin:20px;color:darkgreen;" align="center">ثبت نام شما با موفقیت انجام شد</h3>
+                <h4 style="margin-right:20px;margin-bottom:20px;color:darkgreen;">برای رفتن به پروفایل خود دکمه پروفایل را کلیک کنید</h4>
+                <button class="btn btn-success btn-lg pull-right" type="submit">پروفایل</button>
+                <button class="btn btn-default btn-lg pull-left" ng-click="closeRegistrationWin()">بستن</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+      </div>
+     </div>
+
+  </div>
+</div>
+<!--end of registration section-->

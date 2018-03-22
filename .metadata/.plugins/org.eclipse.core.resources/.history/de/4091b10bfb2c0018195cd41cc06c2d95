@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>برنامه نویسی ایرانیان</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="this site for code competitive">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bootstrap-rtl.min.css">
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/animate.min.css">
+<link rel="stylesheet" href="./css/et-line-font.css">
+<link rel="stylesheet" href="./css/nivo-lightbox.css">
+<link rel="stylesheet" href="./css/nivo_themes/default/default.css">
+<link rel="stylesheet" href="./css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500"
+	rel="stylesheet" type="text/css">
+</head>
+<body ng-app="myApp">
+
+	<!-- navigation section -->
+
+	 <div ng-include="'./pages/public_sections/header.html'"></div> 
+	 <div ng-include="'./pages/public_sections/services.html'"></div> 	
+	 <div ng-include="'./pages/public_sections/about.html'"></div> 	
+	 <div ng-include="'./pages/public_sections/pricing.html'"></div>	
+	<div ng-include="'./pages/public_sections/contact.html'"></div>
+
+	<!-- footer section -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<p>
+						راست چین شده توسط : <a href="http://www.tooplate.com"
+							target="_parent">کارا تم</a>
+					</p>
+					<hr>
+					<ul class="social-icon">
+						<li><a href="#" class="fa fa-facebook wow fadeIn animated"
+							data-wow-delay="0.3s"
+							style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-twitter wow fadeIn animated"
+							data-wow-delay="0.6s"
+							style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-dribbble wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-behance wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-tumblr wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="./static/js_lib/jquery.min.js"></script>
+	<script src="./static/js_lib/angular.min.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/authInterceptor.js"></script>
+	<script src="./static/js_lib/bootstrap.min.js"></script>
+	<script src="./static/js_lib/smoothscroll.js"></script>
+	<script src="./static/js_lib/isotope.js"></script>
+	<script src="./static/js_lib/imagesloaded.min.js"></script>
+	<script src="./static/js_lib/nivo-lightbox.min.js"></script>
+	<script src="./static/js_lib/jquery.backstretch.min.js"></script>
+	<script src="./static/js_lib/wow.min.js"></script>
+	<!-- <script src="./static/js_lib/custom.js"></script> -->
+</body>
+</html>

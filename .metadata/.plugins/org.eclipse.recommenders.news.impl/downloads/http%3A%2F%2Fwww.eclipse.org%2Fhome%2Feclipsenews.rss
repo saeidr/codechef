@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>.::Welcome to the Web-Based Configurator::.</title>
+<link href="../css/brick.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/Multi_Language.js"></script>
+<script language="JavaScript">
+    function ToggleView(LayerToToggle)
+    {
+        if (document.getElementById) {
+            var StyleToChange = document.getElementById(LayerToToggle).style;
+            StyleToChange.display = StyleToChange.display? "":"block";
+        } else if (document.all) {
+            var StyleToChange = document.all[LayerToToggle].style;
+            StyleToChange.display = StyleToChange.display? "":"block";
+        } else if (document.layers) {
+            var StyleToChange = document.layers[LayerToToggle].style;
+            StyleToChange.display = StyleToChange.display? "":"block";
+        }
+    }
+
+function Multi_Language(){
+	var Language="English";
+    var language_Index = get_language_index(Language);
+	document.getElementById("MLG_NoDSLconnection").innerHTML = MLG_NoDSLconnection[language_Index];
+	document.getElementById("MLG_DSLConnectionErrorOccurred_CONTENT_1").innerHTML = MLG_DSLConnectionErrorOccurred_CONTENT_1[language_Index];
+	document.getElementById("MLG_PhysicalConnection").innerHTML = MLG_PhysicalConnection[language_Index];
+	document.getElementById("MLG_DSLConnectionErrorOccurred_CONTENT_2").innerHTML = MLG_DSLConnectionErrorOccurred_CONTENT_2[language_Index];
+	document.getElementById("MLG_AfterCheckingFor").innerHTML = MLG_AfterCheckingFor[language_Index];
+	document.getElementById("MLG_CommonConnectionProblems").innerHTML = MLG_CommonConnectionProblems[language_Index];
+	document.getElementById("MLG_Check").innerHTML = MLG_Check[language_Index];
+	document.getElementById("MLG_Here").innerHTML = MLG_Here[language_Index];
+	document.getElementById("MLG_DSLConnectionErrorOccurred_CONTENT_3").innerHTML = MLG_DSLConnectionErrorOccurred_CONTENT_3[language_Index];
+	document.getElementById("MLG_DSLConnectionErrorOccurred_CONTENT_4").innerHTML = MLG_DSLConnectionErrorOccurred_CONTENT_4[language_Index];
+	document.getElementById("MLG_Common_Connection_Problems").innerHTML = MLG_Common_Connection_Problems[language_Index];
+	document.getElementById("MLG_Common_Problems_1").innerHTML = MLG_Common_Problems_1[language_Index];
+	document.getElementById("MLG_Common_Problems_2").innerHTML = MLG_Common_Problems_2[language_Index];
+	document.getElementById("MLG_Common_Problems_3").innerHTML = MLG_Common_Problems_3[language_Index];
+	document.getElementById("MLG_Common_Problems_4").innerHTML = MLG_Common_Problems_4[language_Index];
+	document.getElementById("MLG_Common_Problems_5").innerHTML = MLG_Common_Problems_5[language_Index];
+}
+
+   
+   $(document).ready(function() {
+	Multi_Language();    
+});	
+</script>
+<style type="text/css">
+div#MyDiv1{
+  margin: 0px 0px 0px 0px;
+  display: none;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper2">
+<div id="popup_win3">
+<ul>
+<li class="popup_left2"></li>
+<li class="popup_center2">
+<div id="popup_content2">
+<ul>
+<li class="popup_title4"><span id='MLG_NoDSLconnection'></span></li>
+<li>
+  <div style="position:absolute; height:235px; z-index:3000; left: 40px; top:70px; width:620px; overflow-x:hidden;overflow-y:auto; padding-right:20px;">
+    <ul>
+	<li class="popup_word3"><span id='MLG_DSLConnectionErrorOccurred_CONTENT_1'></span></li>
+      <li class="space"></li>
+      <li class="popup_word3">
+<div class="w_text blod"><img src="../images/i_block_on.gif" width="10" height="10" /> <span id='MLG_PhysicalConnection'></span></div>
+<div class="step1"><div class="w_text">
+                       <p><span id='MLG_DSLConnectionErrorOccurred_CONTENT_2'></span></p>
+					   <p>&nbsp;</p>
+					   <p>&nbsp;</p>
+					   <p><span id='MLG_AfterCheckingFor'></span> <a href="javascript:ToggleView('MyDiv1');" title="Toggle display of troubleshooting information"><span id='MLG_CommonConnectionProblems'></span></a>
+					   	  
+							<span id='MLG_Check'></span><a href="http://www.zyxel.com" target=_blank><span id='MLG_Here'></span></a> <span id='MLG_DSLConnectionErrorOccurred_CONTENT_3'></span>
+						  
+						  <br />
+						  <span id='MLG_DSLConnectionErrorOccurred_CONTENT_4'></span>
+					   </p>
+					   <p>&nbsp;</p>
+                   </div>
+				   <div id="MyDiv1">
+				       <div class="w_text blod"><span id='MLG_Common_Connection_Problems'></span></div>
+				       <div class="w_text">
+				           <p>&nbsp;</p>
+				           <p><span id='MLG_Common_Problems_1'></span></p>
+					       <p>&nbsp;</p>
+					       <p><span id='MLG_Common_Problems_2'></span></p>
+					       <p>&nbsp;</p>
+					       <p><span id='MLG_Common_Problems_3'></span></p>
+					       <p>&nbsp;</p>
+					       <p><span id='MLG_Common_Problems_4'></span></p>
+					       <p>&nbsp;</p>
+					       <p><span id='MLG_Common_Problems_5'></span></p>
+				       </div>
+				   </div>
+</div>
+  </li>
+    </ul>
+  </div></li>
+</ul>
+</div>
+
+</li>
+<li class="popup_right2"></li>
+</ul>
+</div>
+<div id="popup3"></div>
+</div>
+
+
+</body>
+<!-- #ENDZONE form_no_dsl_connection_zone -->
+</html>

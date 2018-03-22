@@ -1,0 +1,46 @@
+<section class="navbar navbar-fixed-top custom-navbar"
+		role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon icon-bar"></span> <span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">دیجیتال تیم</a>
+			</div>
+			<div class="collapse navbar-collapse" aria-expanded="false">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="active"><a href="#home">خانه</a></li>
+					<li class=""><a href="#work">خدمات ما</a></li>
+					<li class=""><a href="#about">درباره ما</a></li>
+					<li class=""><a href="#team">گروه ما</a></li>
+					<li class=""><a href="#portfolio">نمونه کارها</a></li>
+					<li class=""><a href="#pricing">قیمت گذاری</a></li>
+					<li class=""><a href="#contact">تماس با ما</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- home section -->
+	<section id="home"
+		style="position: relative; z-index: 0; background: none;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<h3>طراحی وب / توسعه وب / رسانه های اجتماعی</h3>
+					<h1>دیجیتال تیم</h1>
+					<hr>
+					<a href="#work" class="smoothScroll btn btn-danger">چه کار می
+						کنیم</a> <a href="#contact" class="smoothScroll btn btn-default">با
+						ما صحبت کن</a>
+				</div>
+			</div>
+		</div>
+		<div class="backstretch"
+			style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 491px; width: 1905px; z-index: -999998; position: absolute;">
+			<img src="./static/images/home-bg-slideshow1.jpg"
+				style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1905px; height: 1269.55px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -389.273px;">
+		</div>
+	</section>

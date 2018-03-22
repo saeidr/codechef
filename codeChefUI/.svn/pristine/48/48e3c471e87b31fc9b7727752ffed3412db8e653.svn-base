@@ -1,0 +1,136 @@
+$(document).ready(function () {
+	function validateEmail(email) {
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(email.toLowerCase());
+	}
+	
+	
+    var navListItems = $('div.setup-panel div a'),
+            allWells = $('.setup-content'),
+            allNextBtn = $('.nextBtn');
+
+    allWells.hide();
+
+    navListItems.click(function (e) {
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+                $item = $(this);
+
+        if (!$item.hasClass('disabled')) {
+            navListItems.removeClass('btn-primary').addClass('btn-default');
+            $item.addClass('btn-primary');
+            allWells.hide();
+            $target.show();
+            $target.find('input:eq(0)').focus();
+        }
+    });
+	
+	function setDisabled() {
+		
+		$('#reGet').show();
+	}
+
+	$("#btnRegistrationWizardStepOne").click(function(){    
+		$('#reGet').hide();
+		window.setTimeout(setDisabled, 30000);
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']"),
+            isValid = true;
+		if( ($("#txtName").val().length)<3
+        	|| 	($("#txtFamily").val().length)<3
+        	||  ($("#txtUsername").val().length)!=11
+        	||  !validateEmail($("#txtEmail").val())
+        	||	$("#txtPassword").val().length<6
+        	||  $("#txtPassword").val()!=$("#txtConfirmPassword").val()){
+        	isValid=false;
+        }
+        
+        
+		
+        $(".form-group").removeClass("has-error");
+        for(var i=0; i<curInputs.length; i++){
+            if (!curInputs[i].validity.valid){
+                isValid = false;
+                $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+        if (isValid)
+            nextStepWizard.removeAttr('disabled').trigger('click');
+    });
+	
+	
+	$("#btnRegistrationWizardStepTwo").click(function(){    
+		$('#reGet').hide();
+		window.setTimeout(setDisabled, 30000);
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']"),
+            isValid = true;
+		
+        
+        
+        
+		
+        $(".form-group").removeClass("has-error");
+        for(var i=0; i<curInputs.length; i++){
+            if (!curInputs[i].validity.valid){
+                isValid = false;
+                $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+        if (isValid){
+        	angular.element($("#txtEmail")).scope().regsiterUser();
+            nextStepWizard.removeAttr('disabled').trigger('click');
+        }
+    });
+	
+	
+    /*allNextBtn.click(function(){
+		$('#reGet').hide();
+		window.setTimeout(setDisabled, 30000);
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']"),
+            isValid = true;
+
+        $(".form-group").removeClass("has-error");
+        for(var i=0; i<curInputs.length; i++){
+            if (!curInputs[i].validity.valid){
+                isValid = false;
+                $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+
+        if (isValid)
+            nextStepWizard.removeAttr('disabled').trigger('click');
+    });
+*/
+    $('div.setup-panel div a.btn-primary').trigger('click');
+	
+	
+	
+	$("#btn_open_register_section").click(function(){
+		 $('#signin_frm').modal('hide');  
+		 $('#registration_frm').modal('show');  
+	 });
+	
+	$("#txtEmail").blur(function(){
+		if(validateEmail($("#txtEmail").val())){
+			$("#msgEmailNotValid").hide();
+		}else{
+			$("#msgEmailNotValid").show();
+		}
+	});
+	
+	$("#txtPassword").blur(function(){
+		if($("#txtPassword").val().length<6){
+			$("#msgPassLength").show();
+		}else{
+			$("#msgPassLength").hide();
+		}
+	});
+});

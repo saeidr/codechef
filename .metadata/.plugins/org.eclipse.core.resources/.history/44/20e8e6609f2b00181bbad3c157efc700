@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>برنامه نویسی ایرانیان</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="this site for code competitive">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bootstrap-rtl.min.css">
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/animate.min.css">
+<link rel="stylesheet" href="./css/et-line-font.css">
+<link rel="stylesheet" href="./css/nivo-lightbox.css">
+<link rel="stylesheet" href="./css/nivo_themes/default/default.css">
+<link rel="stylesheet" href="./css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500"
+	rel="stylesheet" type="text/css">
+</head>
+<body ng-app="myApp">
+
+	<!-- 
+	<div class="preloader" style="display: none;">
+		<div class="sk-spinner sk-spinner-circle">
+			<div class="sk-circle1 sk-circle"></div>
+			<div class="sk-circle2 sk-circle"></div>
+			<div class="sk-circle3 sk-circle"></div>
+			<div class="sk-circle4 sk-circle"></div>
+			<div class="sk-circle5 sk-circle"></div>
+			<div class="sk-circle6 sk-circle"></div>
+			<div class="sk-circle7 sk-circle"></div>
+			<div class="sk-circle8 sk-circle"></div>
+			<div class="sk-circle9 sk-circle"></div>
+			<div class="sk-circle10 sk-circle"></div>
+			<div class="sk-circle11 sk-circle"></div>
+			<div class="sk-circle12 sk-circle"></div>
+		</div>
+	</div>
+ -->
+	<!-- navigation section -->
+	
+	    <ng-include="'./pages/public_sections/header.html'"></ng-include>
+
+	<!-- work section -->
+	<section id="work">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="section-title">
+						<strong>01</strong>
+						<h1 class="heading bold">خدمات ما</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp animated"
+					data-wow-delay="0.6s"
+					style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+					<i class="icon-cloud medium-icon"></i>
+					<h3>بازاریابی وب سایت</h3>
+					<hr>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+						با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+						مجله در ستون و سطر</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp animated"
+					data-wow-delay="0.9s"
+					style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInUp;">
+					<i class="icon-mobile medium-icon"></i>
+					<h3>UI &amp; طراحی UX</h3>
+					<hr>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+						با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+						مجله در ستون و سطر</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp animated"
+					data-wow-delay="1s"
+					style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+					<i class="icon-laptop medium-icon"></i>
+					<h3>تجارت الکترونیک</h3>
+					<hr>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+						با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+						مجله در ستون و سطر</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp animated"
+					data-wow-delay="1s"
+					style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+					<i class="icon-compass medium-icon"></i>
+					<h3>اپلیکیشن موبایل</h3>
+					<hr>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+						با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+						مجله در ستون و سطر</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp animated"
+					data-wow-delay="1s"
+					style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+					<i class="icon-chat medium-icon"></i>
+					<h3>رسانه های اجتماعی</h3>
+					<hr>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+						با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+						مجله در ستون و سطر</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 wow fadeInUp animated"
+					data-wow-delay="1s"
+					style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+					<i class="icon-browser medium-icon"></i>
+					<h3>طرح پاسخگو</h3>
+					<hr>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+						با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+						مجله در ستون و سطر</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- about section -->
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 text-center">
+					<div class="section-title">
+						<strong>02</strong>
+						<h1 class="heading bold">آژانس ما</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<img src="./static/images/about-img.jpg" class="img-responsive"
+						alt="about img">
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<h3 class="bold">گروه طراحی دیجیتال</h3>
+					<h1 class="heading bold">بهترین آژانس طراحی درایران</h1>
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="active"><a href="#design" aria-controls="design"
+							role="tab" data-toggle="tab">طراحی</a></li>
+						<li><a href="#mobile" aria-controls="mobile" role="tab"
+							data-toggle="tab">موبایل</a></li>
+						<li><a href="#social" aria-controls="social" role="tab"
+							data-toggle="tab">اجتماعی</a></li>
+					</ul>
+					<!-- tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="design">
+							<p>
+								لورم ایپسوم متن ساختگی با تولید <a href="#"> صنعت چاپ و با
+									استفاده </a> کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده
+								شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+								بیستری را برای طراحان رایانه ای و فرهنگ .
+							</p>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+								و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+								مجله در ستون و سطرآنچنان که لازم.</p>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="mobile">
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+								و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+								مجله در ستون و سطرآنچنان که لازم.</p>
+							<p>
+								لورم ایپسوم متن ساختگی با تولید <a href="#"> صنعت چاپ و با
+									استفاده </a> کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده
+								شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+								بیستری را برای طراحان رایانه ای و فرهنگ .
+							</p>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="social">
+							<p>
+								لورم ایپسوم متن ساختگی با تولید <a href="#"> صنعت چاپ و با
+									استفاده </a> کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده
+								شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت
+								بیستری را برای طراحان رایانه ای و فرهنگ .
+							</p>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+								و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+								مجله در ستون و سطرآنچنان که لازم.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- team section -->
+	<section id="team">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="section-title">
+						<strong>03</strong>
+						<h1 class="heading bold">گروه ما</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 wow fadeIn animated"
+					data-wow-delay="0.9s"
+					style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;">
+					<div class="team-wrapper">
+						<img src="images/team1.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>برومند</h4>
+							<h3>طراح ارشد</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn animated"
+									data-wow-delay="0.3s"
+									style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn animated"
+									data-wow-delay="0.6s"
+									style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn animated"
+									data-wow-delay="0.9s"
+									style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 wow fadeIn animated"
+					data-wow-delay="1.3s"
+					style="visibility: visible; animation-delay: 1.3s; animation-name: fadeIn;">
+					<div class="team-wrapper">
+						<img src="images/team2.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>مینا</h4>
+							<h3>توسعه دهنده</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn animated"
+									data-wow-delay="0.3s"
+									style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn animated"
+									data-wow-delay="0.6s"
+									style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn animated"
+									data-wow-delay="0.9s"
+									style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 wow fadeIn animated"
+					data-wow-delay="1.6s"
+					style="visibility: visible; animation-delay: 1.6s; animation-name: fadeIn;">
+					<div class="team-wrapper">
+						<img src="images/team3.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>لیندا</h4>
+							<h3>مدیر</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn animated"
+									data-wow-delay="0.3s"
+									style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn animated"
+									data-wow-delay="0.6s"
+									style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn animated"
+									data-wow-delay="0.9s"
+									style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 wow fadeIn animated"
+					data-wow-delay="1.6s"
+					style="visibility: visible; animation-delay: 1.6s; animation-name: fadeIn;">
+					<div class="team-wrapper">
+						<img src="images/team4.jpg" class="img-responsive" alt="team img">
+						<div class="team-des">
+							<h4>ساندرا</h4>
+							<h3>حسابدار</h3>
+							<hr>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn animated"
+									data-wow-delay="0.3s"
+									style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn animated"
+									data-wow-delay="0.6s"
+									style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn animated"
+									data-wow-delay="0.9s"
+									style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- portfolio section -->
+	<div id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="section-title">
+						<strong>04</strong>
+						<h1 class="heading bold">نمونه کارها</h1>
+						<hr>
+					</div>
+					<!-- ISO section -->
+					<div class="iso-section">
+						<ul class="filter-wrapper clearfix">
+							<li><a href="#" data-filter="*" class="selected opc-main-bg">همه</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".html">طراحی</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">فتوشاپ</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">ورد
+									پرس</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".mobile">موبایل</a></li>
+						</ul>
+						<div class="iso-box-section wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;">
+							<div class="iso-box-wrapper col4-iso-box"
+								style="position: relative; height: 845.376px;">
+
+								<div
+									class="iso-box html wordpress mobile col-lg-4 col-md-4 col-sm-6"
+									style="position: absolute; left: 0px; top: 0px;">
+									<a href="images/portfolio-img1.jpg"
+										data-lightbox-gallery="portfolio-gallery"><img
+										src="images/portfolio-img1.jpg" alt="portfolio img"></a>
+								</div>
+
+								<div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6"
+									style="position: absolute; left: 634px; top: 0px;">
+									<a href="images/portfolio-img2.jpg"
+										data-lightbox-gallery="portfolio-gallery"><img
+										src="images/portfolio-img2.jpg" alt="portfolio img"></a>
+								</div>
+
+								<div class="iso-box html mobile col-lg-4 col-md-4 col-sm-6"
+									style="position: absolute; left: 1269px; top: 0px;">
+									<a href="images/portfolio-img3.jpg"
+										data-lightbox-gallery="portfolio-gallery"><img
+										src="images/portfolio-img3.jpg" alt="portfolio img"></a>
+								</div>
+
+								<div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6"
+									style="position: absolute; left: 0px; top: 422px;">
+									<a href="images/portfolio-img4.jpg"
+										data-lightbox-gallery="portfolio-gallery"><img
+										src="images/portfolio-img4.jpg" alt="portfolio img"></a>
+								</div>
+
+								<div class="iso-box html photoshop col-lg-4 col-md-4 col-sm-6"
+									style="position: absolute; left: 634px; top: 422px;">
+									<a href="images/portfolio-img5.jpg"
+										data-lightbox-gallery="portfolio-gallery"><img
+										src="images/portfolio-img5.jpg" alt="portfolio img"></a>
+								</div>
+
+								<div class="iso-box photoshop col-lg-4 col-md-4 col-sm-6"
+									style="position: absolute; left: 1269px; top: 422px;">
+									<a href="images/portfolio-img6.jpg"
+										data-lightbox-gallery="portfolio-gallery"><img
+										src="images/portfolio-img6.jpg" alt="portfolio img"></a>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- pricing section -->
+	<section id="pricing">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 text-center">
+					<div class="section-title">
+						<strong>05</strong>
+						<h1 class="heading bold">قیمت گذاری</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="plan plan-one wow bounceIn animated"
+						data-wow-delay="0.3s"
+						style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;">
+						<div class="plan_title">
+							<i class="icon-mobile medium-icon"></i>
+							<h3>پایه ای</h3>
+							<h2>
+								ریال150 <span>در سال</span>
+							</h2>
+						</div>
+						<ul>
+							<li>100 گیگابایت فضای ذخیره سازی</li>
+							<li>5 نرم افزار وب سایت</li>
+							<li>10 ایمیل امن</li>
+							<li>پشتیبانی 24 ساعته</li>
+						</ul>
+						<button class="btn btn-warning">دریافت کنید</button>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="plan plan-two wow bounceIn animated"
+						data-wow-delay="0.3s"
+						style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;">
+						<div class="plan_title">
+							<i class="icon-desktop medium-icon"></i>
+							<h3>کسب و کار</h3>
+							<h2>
+								ریال260 <span>درسال</span>
+							</h2>
+						</div>
+						<ul>
+							<li>200 گیگابایت فضای ذخیره سازی</li>
+							<li>10 نرم افزار وب سایت</li>
+							<li>20 ایمیل امن</li>
+							<li>پشتیبانی از 30 دقیقه</li>
+						</ul>
+						<button class="btn btn-warning">دریافت کنید</button>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="plan plan-three wow bounceIn animated"
+						data-wow-delay="0.3s"
+						style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;">
+						<div class="plan_title">
+							<i class="icon-cloud medium-icon"></i>
+							<h3>حرفه ای</h3>
+							<h2>
+								ریال380 <span>درسال</span>
+							</h2>
+						</div>
+						<ul>
+							<li>500 گیگابایت فضای ذخیره سازی</li>
+							<li>20 نرم افزار وب سایت</li>
+							<li>40 ایمیل امن</li>
+							<li>پشتیبانی آنلاین</li>
+						</ul>
+						<button class="btn btn-warning">اکنون بخرید</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- contact section -->
+	<section id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 text-center">
+					<div class="section-title">
+						<strong>06</strong>
+						<h1 class="heading bold">تماس با ما</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 contact-info">
+					<h2 class="heading bold">اطلاعات تماس</h2>
+					<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+						با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+						مجله در ستون و سطرآنچنان که لازم است.</p>
+					<div class="col-md-6 col-sm-4">
+						<h3>
+							<i class="icon-envelope medium-icon wow bounceIn animated"
+								data-wow-delay="0.6s"
+								style="visibility: visible; animation-delay: 0.6s; animation-name: bounceIn;"></i>
+							ایمیل
+						</h3>
+						<p>hello@company.com</p>
+					</div>
+					<div class="col-md-6 col-sm-4">
+						<h3>
+							<i class="icon-phone medium-icon wow bounceIn animated"
+								data-wow-delay="0.6s"
+								style="visibility: visible; animation-delay: 0.6s; animation-name: bounceIn;"></i>تلفن
+							ها
+						</h3>
+						<p>010-020-0340 | 090-080-0760</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<form action="#" method="get" class="wow fadeInUp animated"
+						data-wow-delay="0.6s"
+						style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+						<div class="col-md-6 col-sm-6">
+							<input type="text" class="form-control" placeholder="نام"
+								name="نام">
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<input type="email" class="form-control" placeholder="ایمیل"
+								name="ایمیل">
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<textarea class="form-control" placeholder="پیام" rows="7"
+								name="پیام"></textarea>
+						</div>
+						<div class="col-md-offset-4 col-md-8 col-sm-offset-4 col-sm-8">
+							<input type="submit" class="form-control" value="ارسال پیام">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer section -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<p>
+						راست چین شده توسط : <a href="http://www.tooplate.com"
+							target="_parent">کارا تم</a>
+					</p>
+					<hr>
+					<ul class="social-icon">
+						<li><a href="#" class="fa fa-facebook wow fadeIn animated"
+							data-wow-delay="0.3s"
+							style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-twitter wow fadeIn animated"
+							data-wow-delay="0.6s"
+							style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-dribbble wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-behance wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-tumblr wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+    <script src="./static/js_lib/jquery.min.js"></script>
+	<script src="./static/js_lib/angular.min.js"></script>
+	<script src="./js/app.js"></script>
+	<script src="./js/authInterceptor.js"></script>
+	<script src="./static/js_lib/bootstrap.min.js"></script>
+	<script src="./static/js_lib/smoothscroll.js"></script>
+	<script src="./static/js_lib/isotope.js"></script>
+	<script src="./static/js_lib/imagesloaded.min.js"></script>
+	<script src="./static/js_lib/nivo-lightbox.min.js"></script>
+	<script src="./static/js_lib/jquery.backstretch.min.js"></script>
+	<script src="./static/js_lib/wow.min.js"></script>
+	<script src="./static/js_lib/custom.js"></script>
+</body>
+</html>

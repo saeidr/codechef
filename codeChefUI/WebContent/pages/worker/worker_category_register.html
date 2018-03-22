@@ -1,0 +1,422 @@
+<!-- worker category registration section-->
+<div ng-controller="WorkerController as WCtl">
+<div id="worker_category_selection_frm"
+	ng-controller="WorkerController as WCtl" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg" style="color: black;">
+		Modal content
+		<div class="modal-content">
+			<a ng-click="closeWorkerCategoryRegistrationWin()"
+				style="border: 0px solid #d6d9df; height: 28px; width: 28px; display: block; position: absolute; top: 7px; left: 12px; z-index: 1; cursor: pointer;">
+				<img src="static/images/exit.png" alt="" width="35" height="25">
+			</a>
+			<div class="panel-heading btn-info">
+				<h3 class="panel-title" style="text-align: center;">
+					<strong>انتخاب زمینه های فعالیتی</strong>
+				</h3>
+			</div>
+			<div class="modal-body">
+				<div class="stepwizard">
+					<div class="stepwizard-row setup-panel">
+						<div class="stepwizard-step">
+							<a href="#step-1_worker_category"
+								id="step_1_worker_category_btn_selector" type="button"
+								class="btn btn-primary btn-circle">1</a>
+							<p>انتخاب فعالیت های همکاری</p>
+						</div>
+						<div class="stepwizard-step">
+							<a href="#step-2_worker" id="step_2_btn_category_selector"
+								type="button" class="btn btn-default btn-circle"
+								disabled="disabled">2</a>
+							<p>تکمیل اطلاعات فردی</p>
+						</div>
+						<div class="stepwizard-step">
+							<a href="#step-3_worker" type="button"
+								id="step_3_btn_category_selector"
+								class="btn btn-default btn-circle" disabled="disabled">3</a>
+							<p>آپلود مدارک</p>
+						</div>
+						<div class="stepwizard-step">
+							<a href="#step-4_worker" type="button"
+								id="step_4_btn_category_selector"
+								class="btn btn-default btn-circle" disabled="disabled">4</a>
+							<p>تایید صحت اطلاعات</p>
+						</div>
+						<div class="stepwizard-step">
+							<a href="#step-5_worker" type="button"
+								id="step_5_btn_category_selector"
+								class="btn btn-default btn-circle" disabled="disabled">5</a>
+							<p>ارائه ی کد رهگیری</p>
+						</div>
+					</div>
+				</div>
+				<form role="form">
+					<div class="row setup-content" id="step-1_worker_category">
+						<div class="col-xs-12">
+							<button type="button" class="btn btn-primary btn-md"
+								ng-click="workerSelectCategory(1)">انتخاب خدمت اول</button>
+							<button type="button" class="btn btn-primary btn-md"
+								id="btnNextStepWorker2" style="display: none;"
+								ng-click="workerSelectCategory(2)">انتخاب خدمت دوم</button>
+							<button type="button" class="btn btn-primary btn-md"
+								id="btnNextStepWorker3" style="display: none;"
+								ng-click="workerSelectCategory(3)">انتخاب خدمت سوم</button>
+							<button type="button" class="btn btn-primary btn-md"
+								id="btnNextStepWorker4" style="display: none;"
+								ng-click="workerSelectCategory(4)">انتخاب خدمت چهارم</button>
+
+							<div id="tblMyService" style="">
+								<h3 style="color: darkred; margin: 20px;" align="center">خدمات
+									انتخابی شما</h3>
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th>دسته ی انتخابی</th>
+											<th>موضوع همکاری</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>John</td>
+											<td>Doe</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+							<button id="btnRegisterWorkerCategoryStep1"
+								class="btn btn-primary nextBtn btn-lg pull-right"
+								style="margin-left: 5px;" type="button">مرحله ی بعد</button>
+						</div>
+					</div>
+					<div class="row setup-content" id="step-2_worker">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<span> <label class="control-label">استان ارائه ی
+										سرویس<span style="color: red;">*</span>
+								</label>
+								</span> <span> <input id="txtprovince" type="text"
+									name="province" required="required" class="form-control"
+									placeholder="Enter Province" />
+								</span>
+							</div>
+							<div class="form-group">
+								<span> <label class="control-label">شهر ارائه ی
+										سرویس<span style="color: red;">*</span>
+								</label>
+								</span> <span> <input id="txtcity" type="text" name="city"
+									required="required" class="form-control"
+									placeholder="Enter city" />
+								</span>
+							</div>
+							<div class="form-group">
+								<span> <label class="control-label">منطقه ارائه
+										سرویس<span style="color: red;">*</span>
+								</label>
+								</span> <span> <input id="txtregion" type="text" name="region"
+									required="required" class="form-control"
+									placeholder="Enter region" />
+								</span>
+							</div>
+							<div class="form-group">
+								<span> <label class="control-label">ادرس منزل/محل
+										کار<span style="color: red;">*</span>
+								</label>
+								</span> <span> <input id="txtAddress" type="text"
+									name="homeAddress" required="required" class="form-control"
+									placeholder="Enter Home Address" />
+								</span>
+							</div>
+							<div class="form-group">
+								<span> <label class="control-label">تلفن تماس<span
+										style="color: red;">*</span></label>
+								</span> <span> <input id="txtTel1" type="text" name="tel"
+									required="required" class="form-control"
+									placeholder="Enter telphone" />
+								</span>
+							</div>
+							<div class="form-group">
+								<span> <span id="msgEnterRequiredFieldWorker"
+									style="color: red; display: none;">پر کردن فیلدهای ستاره
+										دار الزامی است</span>
+								</span> <span>
+									<div class="setup-panel stepwizard-step"
+										style="display: inline">
+										<div style="display: inline;">
+											<a id="btnGoToPrev_Step1" type="button"
+												class="btn btn-primary btn-lg" style="float: left;">مرحله
+												قبل</a>
+										</div>
+									</div>
+									<button id="btnRegisterWorkerCategoryStep2"
+										class="btn btn-primary nextBtn btn-lg pull-right"
+										style="margin-left: 5px;" type="button">مرحله ی بعد</button>
+								</span>
+							</div>
+
+						</div>
+					</div>
+					<div class="row setup-content" id="step-3_worker">
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-md-12">
+									<label> کارت ملی: </label><input type="file" name="pic"
+										id="card"> <br> <label> صفحه اول
+										شناسنامه: </label><input type="file" name="pic" id="page"> <br>
+									<label> مدرک تحصیلی: </label><input type="file" name="pic"
+										id="src"> <br> <label> گواهینامه شغلی: </label><input
+										type="file" name="pic" id="job"> <br> <label>
+										رزومه: </label><input type="file" name="pic" id="cv">
+								</div>
+							</div>
+							<br />
+							<div class="row">
+								<div class="col-md-12">
+									<div class="setup-panel stepwizard-step"
+										style="display: inline">
+										<div style="display: inline;">
+											<a id="btnGoToPrev_Step2" type="button"
+												class="btn btn-primary btn-lg" style="float: left; margin-left: 5px; margin-top: 20px;">مرحله
+												قبل</a>
+										</div>
+									</div>
+									<button id="btnRegisterWorkerCategoryStep3"
+										class="btn btn-primary nextBtn btn-lg pull-right"
+										style="margin-left: 5px; margin-top: 20px;" type="button">مرحله
+										ی بعد</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row setup-content" id="step-4_worker">
+						<div class="col-xs-12">
+							<div class="col-md-6">
+								<div class="form-group" id="div1">
+
+									<br> <label> کارت ملی: </label> <br> <label>
+										صفحه اول شناسنامه: </label> <br> <label> مدرک تحصیلی: </label> <br>
+									<label> گواهینامه شغلی: </label> <br> <label>
+										رزومه: </label>
+
+								</div>
+							</div>
+							<div class="col-md-6">
+								<br>
+
+								<div class="row">
+									<div class="col-md-3">
+										<span> انواع خدمات:</span>
+									</div>
+									<div class="col-md-9">
+										<label id="services1"> </label>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-3">
+										<span> استان:</span>
+									</div>
+									<div class="col-md-9">
+										<label id="province1"> </label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3">
+										<span> شهر:</span>
+									</div>
+									<div class="col-md-9">
+										<label id="city1"></label>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-3">
+										<span> محله:</span>
+									</div>
+									<div class="col-md-9">
+										<label id="region1"></label>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-3">
+										<span> آدرس:</span>
+									</div>
+									<div class="col-md-9">
+										<label id="address1"> </label>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-3">
+										<span> تلفن تماس :</span>
+									</div>
+									<div class="col-md-9">
+										<label id="tel1"> </label>
+									</div>
+								</div>
+
+
+
+							</div>
+							<div class="setup-panel stepwizard-step" style="display: inline">
+								<div style="display: inline;">
+									<a id="btnGoToPrev_Step3" type="button"
+										class="btn btn-primary btn-lg" style="float: left;margin-left: 5px; margin-top: 20px;">مرحله
+										قبل</a>
+								</div>
+								<div>
+									<button id="btnRegisterWorkerCategoryStep4"
+										class="btn btn-primary nextBtn btn-lg pull-right"
+										style="margin-left: 5px; margin-top: 20px;" type="button">تایید</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="row setup-content" id="step-5_worker">
+						<div class="col-xs-12">کد رهگیری</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+end of worker category registration section popup section for select
+category
+<div class="modal fade" id="select_category_for_coworkers" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">انتخاب گروه</h4>
+			</div>
+			<div class="modal-body">
+				<ul>
+					<li ng-repeat="category in WCtl.categories | filter:parentNode"><a  style="cursor: pointer;" class="check"
+						ng-click="workerSelectSubCategory(category)" ng-attr-id="{{category.id}}">
+							{{category.name}}
+						 </a>
+					</li>
+					
+					<!-- <li ng-repeat="category in WCtl.categories | filter:parentNode"><a  style="cursor: pointer;" class="check"
+						data-toggle="modal" data-target="#myModal2" data-dismiss="modal" ng-click="workerSelectSubCategory(category.id)" ng-attr-id="{{category.id}}">
+							{{category.name}}
+						 </a>
+					</li> -->
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="myModal2" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">ماشین های اداری</h4>
+			</div>
+			<div class="modal-body">
+				<P>
+					<button type="button" class="btn btn-info btn-sm"
+						data-toggle="modal" data-target="#myModal" data-dismiss="modal">بازگشت</button>
+				</P>
+				<ul>
+					<li ng-repeat="category in WCtl.categories | filter:childNode"><a style="cursor: pointer;" value="اسکنر و پرینتر"
+						class="check2"  ng-attr-id="{{category.id}}" ng-click="workerSelectSubCategory2(WCtl.categories,category)" data-dismiss="modal"> {{category.name}}</a>
+					</li>
+					
+					<!-- <li><a style="cursor: pointer;" value="اسکنر و پرینتر"
+						class="check2" id="print" data-dismiss="modal"> اسکنر و پرینتر</a></li>
+					<li><a style="cursor: pointer;" value="دستگاه کپی"
+						class="check2" id="copy" data-dismiss="modal">دستگاه کپی</a></li>
+					<li><a style="cursor: pointer;" value="فکس" class="check2"
+						id="fax" data-dismiss="modal">فکس</a></li> -->
+				</ul>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+
+<!-- <div class="modal fade" id="myModal2" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">ماشین های اداری</h4>
+			</div>
+			<div class="modal-body">
+				<P>
+					<button type="button" class="btn btn-info btn-sm"
+						data-toggle="modal" data-target="#myModal" data-dismiss="modal">بازگشت</button>
+				</P>
+				<ul>
+					<li><a style="cursor: pointer;" value="اسکنر و پرینتر"
+						class="check2" id="print" data-dismiss="modal"> اسکنر و پرینتر</a></li>
+					<li><a style="cursor: pointer;" value="دستگاه کپی"
+						class="check2" id="copy" data-dismiss="modal">دستگاه کپی</a></li>
+					<li><a style="cursor: pointer;" value="فکس" class="check2"
+						id="fax" data-dismiss="modal">فکس</a></li>
+				</ul>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div> -->
+
+<div class="modal fade" id="myModal3" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">سخت افزار</h4>
+			</div>
+			<div class="modal-body">
+				<P>
+					<button type="button" class="btn btn-info btn-sm"
+						data-toggle="modal" data-target="#myModal" data-dismiss="modal">بازگشت</button>
+				</P>
+				<ul>
+					<li><a style="cursor: pointer;" value="طراحی کارت گرافیک"
+						class="check2" data-dismiss="modal">طراحی کارت گرافیک</a></li>
+					<li><a style="cursor: pointer;" value="چک کردن RAM"
+						class="check2" data-dismiss="modal">چک کردن RAM</a></li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="modal fade" id="myModal4" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">نرم افزار</h4>
+			</div>
+			<div class="modal-body">
+				<P>
+					<button type="button" class="btn btn-info btn-sm"
+						data-toggle="modal" data-target="#myModal" data-dismiss="modal">بازگشت</button>
+				</P>
+				<ul>
+					<li><a style="cursor: pointer;" value="نصب ویندوز"
+						class="check2" id="windows" data-dismiss="modal">نصب ویندوز</a></li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- popup section for select category -->

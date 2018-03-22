@@ -1,0 +1,138 @@
+
+ <!-- [FOOTER]
+ ============================================================================================================================
+ -->
+  <!--
+<footer class="site-footer section-spacing text-center " id="eight">
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p class="footer-links"><a href="#">Terms of Use</a> <a href="#">Privacy Policy</a></p>
+      </div>
+      <div class="col-md-4"> <small>&copy; 2015 Nim. All rights reserved.</small></div>
+      <div class="col-md-4"> 
+        <!--social-->
+   <!--     
+        <ul class="social">
+          <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter "></i></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+        </ul>
+        
+        <!--social end--> 
+    <!--    
+      </div>
+    </div>
+  </div>
+</footer>
+
+ 
+ -->
+ <!-- [/FOOTER]
+ ============================================================================================================================
+ -->
+
+ 
+ <footer class="l-footer color-gray" style=" height:300px; " >
+         
+		 <div class="footer-inner container" style="padding:30px 0 0 0;">
+			<div class="row">
+                <div class="wrapper wrapper-large">
+                    <div class="footer-cols-container">
+                        <div class="footer-cols-inner">
+                          
+						  <ul class="footer-cols row">
+							
+						
+                                <li class="footer-col col-md-5 " style="list-style: none;">
+								
+                                    <div class="footer-col-inner display-inline-block text-justify" style="color:white">
+                                        <h4 style="font-color:white" ><a href="#">تماس با ما</a></h4>
+											<p class="mb-10"><i class="fa fa-map-marker footer-icon"></i><span class="small">دفتر مرکزی: تهران - خیابان ایرانشهر جنوبی - رو به روی اداره پست - پلاک  - 16طبقه سوم - واحد  5</span></p>
+                                            <p class="mb-10"><i class="fa fa-phone footer-icon"></i> <a href="tel:02154591600">021-54591600</a></p>
+                                        <p class="mb-10"><i class="fa fa-envelope footer-icon"></i><a href="mailto:info@a4baz.com" class="small">info@fanavayar.com</a></p>
+                                    </div>
+									
+                                </li>
+								
+							
+                                <li class="footer-col col-description col-md-5 col-sm-12" style="list-style: none;">
+                                  
+								  <div class="footer-col-inner" style="color:white">
+                                        <h4 class="item-title title-small align-center"> درباره فن آوا یار</h4>
+                                        <p class="m-text weight-bold-semi">فن آوا یار جدیدترین سرویس ارائه خدمات و تعمیرات تجهیزات الکترونیکی است<br/>که در کمترین زمان و با بهترین کیفیت به مشتریان خود ارائه سرویس می‌دهد و به مشتریان خود کمک می‌کند تا در کنار آن در هزینه و زمان خود صرفه جویی کنند.</p>
+                                    </div>
+									
+                                </li>
+							
+						
+                                <li class="footer-col col-md-2 col-sm-12 text-center" style="list-style: none;">
+                                    <div class="footer-col-inner display-inline-block align-center">
+                                        <h4 class="item-title title-small"></h4>
+                                        <ul class="footer-download">
+                                            <li>
+                                               
+													<div >
+														<img id="sizpfukzjzpefukzjxlz" style="cursor:pointer" src="static/images/logo.png"  width="100" height="90">
+													</div>
+												
+											</li>
+											<br>
+													<li style="background-color=white"  width="100" height="90" >
+														<a href="#"><i class="fa fa-facebook  fa-2x"> </i> &nbsp; &nbsp;</a>
+														<a href="#"><i class="fa fa-twitter fa-2x"></i>&nbsp;&nbsp;</a>
+														<a href="#"><i class="fa fa-dribbble fa-2x"></i>&nbsp;&nbsp;</a>
+														<a href="#"><i class="fa fa-behance fa-2x"></i>&nbsp;&nbsp;</a>
+													</li>
+										</ul> 
+								    </div>
+                                </li>
+							</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper wrapper-large">
+                    <div class="footer-copyright-container">
+                        <div class="footer-copyright table">
+                           
+						   <div class="copyright-designer td col-md-6 col-sm-12 align-left" style="color:white">
+							   <p class="inline-middle  mb-10">فن آوا یار را در شبکه های اجتماعی دنبال کنید .</p>
+                                <ul class="inline-list social-footer inline-middle mb-10">
+                                    <li>
+                                        <a href="https://t.me/joinchat/AAAAAEJMZJ75_4V_UrdxhQ" target="_blank" onclick="ga('send', 'event', {'eventCategory': 'link', 'eventAction': 'footer_telegram'});">
+                                        <i class="fa fa-2x fa-telegram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fi-blogger"></i></a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+							
+							 <!--
+                            <div class="copyright-signature td col-md-6 col-sm-12 align-right weight-bold keep-ltr mb-10">
+                                <span class="copyright-label">© 2017</span>
+                                <a href="/" ref="nofollow" class="copyright-icon" title="A4BAZ">
+                                <span>A4BAZ</span>
+                                </a>
+                                &nbsp;|&nbsp;
+                                <a href="https://a4baz.com/terms.html" class="copyright-label  weight-normal">قوانین و مقررات</a>
+                                &nbsp;|&nbsp;
+                                <a href="https://a4baz.com/faq.html" class="copyright-label  weight-normal">سوالات متداول</a>
+                                &nbsp;|&nbsp;
+                                <a href="https://a4baz.com/contact-us.html" class="copyright-label  weight-normal">تماس با ما</a>
+                                &nbsp;|&nbsp;
+                                <a href="#" target="_blank" class="copyright-label  weight-normal">وب‌ سرویس</a>
+                            </div>
+							-->
+                        </div>
+                    </div>
+                </div>
+			</div>
+            </div>
+        </footer>
+ 
