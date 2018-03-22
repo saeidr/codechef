@@ -1,4 +1,4 @@
-<section class="navbar navbar-fixed-top custom-navbar"
+<section class="navbar navbar-fixed-top custom-navbar" ng-controller="BaseController as ctl"
 		role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -11,13 +11,11 @@
 			</div>
 			<div class="collapse navbar-collapse" aria-expanded="false">
 				<ul class="nav navbar-nav navbar-left">
-					<li class="active"><a href="#home">خانه</a></li>
-					<li class=""><a href="#work">خدمات ما</a></li>
-					<li class=""><a href="#about">درباره ما</a></li>
-					<li class=""><a href="#team">گروه ما</a></li>
-					<li class=""><a href="#portfolio">نمونه کارها</a></li>
-					<li class=""><a href="#pricing">قیمت گذاری</a></li>
-					<li class=""><a href="#contact">تماس با ما</a></li>
+					<li ng-click="gotoElement('home')" class="active" ><a  href="#">خانه</a></li>
+					<li ng-click="gotoElement('work')" class=""><a href="#">خدمات ما</a></li>
+					<li ng-click="gotoElement('about')" class=""><a href="#">درباره ما</a></li>
+					<li ng-click="gotoElement('pricing')" class=""><a href="#">قیمت گذاری</a></li>
+					<li ng-click="gotoElement('contact')" class=""><a href="#">تماس با ما</a></li>
 				</ul>
 			</div>
 		</div>
