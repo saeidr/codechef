@@ -3,7 +3,7 @@ $.i18n.properties({
 	name : 'Messages',
 	path : './resources/',
 	mode : 'both',
-	language :"en" ,
+	language :lang ,
 	callback : function() {
 		$(".navbar-collapse li a.home ").text(lblMnuHome);
 		$(".navbar-collapse li a.services").text(lblMnuServices);
@@ -12,6 +12,3 @@ $.i18n.properties({
 		$(".navbar-collapse li a.contactUs").text(lblMnuContactUs);
 	}
 })
-if(lang=="en"){
-	$('link[rel=stylesheet][href="./css/bootstrap-rtl.min.css"]').remove();
-}
