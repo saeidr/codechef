@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding//WebContent/pages/AllUser/registration_popup.html=UTF-8
-encoding//WebContent/resources/pageProperties_fa.properties=UTF-8
+encoding//WebContent/resources/Messages.properties=UTF-8
+encoding//WebContent/resources/Messages_fa.properties=UTF-8
