@@ -1,4 +1,4 @@
-angular.module('myApp').factory('anchorSmoothScroll',[function(){
+angular.module('myApp').factory('anchorSmoothScrollService',[function(){
   
 	var factory={scrollTo:scrollTo};
    

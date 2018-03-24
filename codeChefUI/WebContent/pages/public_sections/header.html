@@ -1,4 +1,4 @@
-<section class="navbar navbar-fixed-top custom-navbar" ng-controller="BaseController as ctl"
+<section class="navbar navbar-fixed-top custom-navbar" ng-controller="directionController as ctl"
 		role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -7,7 +7,15 @@
 					<span class="icon icon-bar"></span> <span class="icon icon-bar"></span>
 					<span class="icon icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">دیجیتال تیم</a>
+				<span href="#" class="navbar-brand" ng-controller="directionController">
+					<span ng-click="changeLang('en')" id="aBtnEN" style="display: inline;">   
+            	   	   <img alt="en" src="./static/images/EN.png" style="width:20px;height: 15px;">
+            		</span></li>
+            		<span class="devider">&nbsp;</span>
+	            	<span ng-click="changeLang('fa')" id="aBtnFA" style="display: inline;">
+	            		<img alt="fa" src="./static/images/FA.png" style="width:20px;height: 15px;">
+	            	</span>
+				</span>
 			</div>
 			<div class="collapse navbar-collapse" aria-expanded="false" >
 				<ul class="nav navbar-nav navbar-left" style="direction: ltr !important;">
