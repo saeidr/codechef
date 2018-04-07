@@ -1,4 +1,8 @@
-
+<style>
+	.tooltip{
+		font-size:large;
+	}
+</style>
 	<!-- contact section -->
 	<section id="contact">
 		<div class="container">
@@ -56,5 +60,32 @@
 					</form>
 				</div>
 			</div>
+			
 		</div>
+		<div class="row" style="padding-top:30px; !important;">
+				<div class="col-md-12 col-sm-12 text-center">
+					<ul class="social-icon">
+						<li><a href="#" class="fa fa-facebook wow fadeIn animated"
+							data-wow-delay="0.3s" data-toggle="tooltip" title="facebook_account"
+							style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-twitter wow fadeIn animated"
+							data-wow-delay="0.6s" data-toggle="tooltip" title="twitter_account"
+							style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-dribbble wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-behance wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+						<li><a href="#" class="fa fa-tumblr wow fadeIn animated"
+							data-wow-delay="0.9s"
+							style="visibility: visible; animation-delay: 0.9s; animation-name: fadeIn;"></a></li>
+					</ul>
+				</div>
+			</div>
 	</section>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>

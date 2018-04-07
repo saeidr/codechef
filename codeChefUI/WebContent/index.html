@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!--in header read from properties file for multiple language support  -->
-<html lang="{{lang}}" ng-app="myApp" ng-controller="directionController" ng-init="lang='fa'" ng-cloak>
+<!--in header read from properties file for multiple language support ng-init="lang='fa'" -->
+<html lang="{{lang}}" ng-app="myApp" ng-controller="directionController"  ng-cloak>
 <head>
 <style>
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak,
@@ -25,18 +25,15 @@
 <link rel="stylesheet" href="./css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500"
 	rel="stylesheet" type="text/css">
-
 </head>
 <body>
-
+<!-- <div>	<h1 style="background-color:white;">{{lang}}</h1></div> -->
 	<div ng-include="'./pages/public_sections/header.html'"></div>
 	<div ng-include="'./pages/public_sections/services.html'"></div>
 	<div ng-include="'./pages/public_sections/about.html'"></div>
 	<div ng-include="'./pages/public_sections/pricing.html'"></div>
 	<div ng-include="'./pages/public_sections/contact.html'"></div>
 	<div ng-include="'./pages/public_sections/footer.html'"></div>
-
-
 	<script src="./static/js_lib/jquery.min.js"></script>
 	<script src="./static/js_lib/jquery.min.js"></script>
 	<script src="./static/js_lib/jquery.i18n.properties.min.js"></script>

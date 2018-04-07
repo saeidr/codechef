@@ -1,17 +1,13 @@
 'use strict';
 
 angular.module('myApp').controller('directionController', ['$scope','$location', function($scope,$location) {
-	$scope.init=function(){
-        $scope.lang="fa";/* default language*/
-    }
+		
+	$scope.lang="fa";//default language
 	
 	$scope.changeLang=function(selectedLang){
-  	  alert($('html')[0].lang);
-		 /*alert($scope.lang)*/
-		  $scope.lang=selectedLang;
-		  $scope.$apply();
-		/* alert($scope.lang)*/
+		 $scope.lang=selectedLang;
    }
+	
 }]);
 
 angular.module('myApp').controller('scrollController', ['$scope','$location','anchorSmoothScrollService', function($scope,$location,anchorSmoothScrollService) {

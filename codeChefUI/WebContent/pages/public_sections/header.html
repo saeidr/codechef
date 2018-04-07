@@ -1,5 +1,5 @@
-<section class="navbar navbar-fixed-top custom-navbar" ng-controller="directionController as ctl"
-		role="navigation">
+<section class="navbar navbar-fixed-top custom-navbar" ng-controller="scrollController as ctl"
+		role="navigation"><!-- ng-controller="scrollController as ctl" -->
 		<div class="container">
 			<div class="navbar-header">
 				<button class="navbar-toggle" data-toggle="collapse"
@@ -7,14 +7,27 @@
 					<span class="icon icon-bar"></span> <span class="icon icon-bar"></span>
 					<span class="icon icon-bar"></span>
 				</button>
-				<span href="#" class="navbar-brand" ng-controller="directionController">
+				<!-- <span href="#" class="navbar-brand" ng-controller="directionController">
 					<span ng-click="changeLang('en')" id="aBtnEN" style="display: inline;">   
             	   	   <img alt="en" src="./static/images/EN.png" style="width:20px;height: 15px;">
-            		</span></li>
+            		</span>
             		<span class="devider">&nbsp;</span>
 	            	<span ng-click="changeLang('fa')" id="aBtnFA" style="display: inline;">
 	            		<img alt="fa" src="./static/images/FA.png" style="width:20px;height: 15px;">
 	            	</span>
+				</span> -->
+				
+				<span href="#" class="navbar-brand" ng-controller="directionController" style="padding-top:0px;">
+					<ul class="nav pull-right">
+                    <li class="dropdown " ><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span><span class="fa fa-user" style="font-size:medium;"></span></a>
+                        <ul class="dropdown-menu" style="background-color:rgba(255,255,255,0.6)">
+                            <li><a href="/user/preferences" style="color:black;"><i class="fa fa-sign-in"></i>ورود</a></li>
+                            <li><a href="/help/support" style="color:black;"><i class="fa fa-plus"></i> ثبت نام</a></li>
+                            <li class="divider" style="color:black;"></li>
+                            <li><a href="/auth/logout" style="color:black;"><i class="fa fa-sign-out"></i> خروج</a></li>
+                        </ul>
+                    </li>
+                </ul>
 				</span>
 			</div>
 			<div class="collapse navbar-collapse" aria-expanded="false" >
