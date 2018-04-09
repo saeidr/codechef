@@ -15,7 +15,7 @@ angular.module('myApp').controller('UserController', ['$scope','$location','$anc
     self.isUserNameExistA = isUserNameExistA;
     $scope.emailFormat = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
     
-    fetchAllUsers();
+   // fetchAllUsers();
 
     function fetchAllUsers(){
         UserService.fetchAllUsers()
